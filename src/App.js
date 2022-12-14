@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Plan from './pages/plan/Plan';
 
 function App() {
   return (
     <div className="App">
-      <h1>-woozy-north-6172</h1>
+      <Plan />
     </div>
   );
 }
