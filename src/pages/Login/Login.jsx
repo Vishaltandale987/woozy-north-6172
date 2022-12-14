@@ -13,7 +13,7 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
 import { useState } from 'react';
-  import { useDispatch } from 'react-redux';
+  import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../Redux/Login/Login.action';
   
   export default function Login() {
@@ -21,6 +21,7 @@ import { login } from '../../Redux/Login/Login.action';
     
     const existUser= JSON.parse(localStorage.getItem("userDetails"))||[];
     const dispatch = useDispatch();
+    const state= useSelector((store)=>store.loginManager);
 
 
     const handleChange=(e)=>{
@@ -31,6 +32,8 @@ import { login } from '../../Redux/Login/Login.action';
     const handleLogin=()=>{
         dispatch(login(user));
     }
+
+
     return (
       <Flex
         minH={'100vh'}
@@ -64,6 +67,8 @@ import { login } from '../../Redux/Login/Login.action';
                   <Link color={'blue.400'}>Forgot password?</Link>
                 </Stack>
                 <Button onClick={handleLogin}
+                  isLoading={state.loading}
+                  loadingText={'Submiting'}
                   bg={'blue.400'}
                   color={'white'}
                   _hover={{

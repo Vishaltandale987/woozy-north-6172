@@ -18,6 +18,7 @@ export const signupReducer=(state=initialState,{type,payload})=>{
             }
         }
         case SIGNUP_EXISTING_USER:{
+            alert(payload)
             return{
                 ...state,
                 loading:false,

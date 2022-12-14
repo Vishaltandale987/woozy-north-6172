@@ -16,7 +16,7 @@ export const signup = (creds)=> (dispatch)=>{
         dispatch({type:SIGNUP_SUCCESS,payload:creds})
     }
     else{
-        dispatch({type:SIGNUP_EXISTING_USER})
+        dispatch({type:SIGNUP_EXISTING_USER,payload:"User already exist!"})
     }
    
  

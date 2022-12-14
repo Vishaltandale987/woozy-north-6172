@@ -13,7 +13,6 @@ import {
     Text,
     useColorModeValue,
     Link,
-    Spinner,
   } from '@chakra-ui/react';
   import { useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
@@ -39,30 +38,17 @@ import { signup } from '../../Redux/Signup/Signup.action';
     
 
     const handleSignup=()=>{
-        dispatch(signup(user));
-       
+            dispatch(signup(user));  
     }
 
-    if(state.loading){
-        return(
-            <Box>
-            <Spinner
-                thickness='4px'
-                speed='0.65s'
-                emptyColor='gray.200'
-                color='blue.500'
-                size='xl'
-            />
-            </Box>
-        )
-       }; 
+    
     
     return (
       <Flex
         minH={'100vh'}
         align={'center'}
         justify={'center'}
-       >
+        bg={useColorModeValue('gray.50', 'gray.800')}>
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
             <Heading fontSize={'4xl'} textAlign={'center'}>
@@ -71,7 +57,7 @@ import { signup } from '../../Redux/Signup/Signup.action';
           </Stack>
           <Box
             rounded={'lg'}
-           
+            bg={useColorModeValue('white', 'gray.700')}
             boxShadow={'lg'}
             p={8}>
             <Stack spacing={4}>
@@ -110,6 +96,7 @@ import { signup } from '../../Redux/Signup/Signup.action';
               </FormControl>
               <Stack spacing={10} pt={2}>
                 <Button onClick={handleSignup}
+                  isLoading={state.loading}
                   loadingText="Submitting"
                   size="lg"
                   bg={'blue.400'}
@@ -117,7 +104,7 @@ import { signup } from '../../Redux/Signup/Signup.action';
                   _hover={{
                     bg: 'blue.500',
                   }}>
-                  Sign up
+                  Submit
                 </Button>
               </Stack>
               <Stack pt={6}>

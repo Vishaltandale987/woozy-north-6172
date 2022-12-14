@@ -16,6 +16,7 @@ export const loginReducer=(state=initialState,{type,payload})=>{
             }
         }
         case LOGIN_SUCCESS:{
+            alert("Login Successful")
             return{
                 ...state,
                 loading:false,
@@ -24,6 +25,7 @@ export const loginReducer=(state=initialState,{type,payload})=>{
             }
         }
         case LOGIN_ERROR:{
+            alert(payload)
             return{
                 ...state,
                 loading:false,

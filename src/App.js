@@ -6,9 +6,7 @@ import Signup from './pages/Login/Signup';
 function App() {
   return (
     <div className="App">
-      <h1>-woozy-north-6172</h1>
-      <Login/>
-      <Signup/>
+      <h1>woozy-north-6172</h1>
     </div>
   );
 }
