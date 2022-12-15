@@ -6,7 +6,7 @@ export const login = (creds)=> (dispatch)=>{
  const existUser= JSON.parse(localStorage.getItem("userDetails"))||[];
     dispatch({type: LOGIN_LOADING});
 
-    existUser.map((el)=>{
+    existUser.forEach((el)=>{
         if(el.email===creds.email && el.password===creds.password){
             return  flag=true;
         }
