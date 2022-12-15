@@ -2,7 +2,7 @@ import { Box ,Flex,Heading,Spacer,Button,ButtonGroup} from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import Solutions from '../Solutions';
+import Solutions from './Solutions';
 
 const Navbar = ({text}) => {
     const val=text;
