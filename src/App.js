@@ -1,19 +1,12 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
-import Navbar from './compounts/navbar/Navbar';
-import Footer from './footer/Footer';
-import Allrouting from './compounts/Allrouting';
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      {/* <h1>-woozy-north-6172</h1> */}
-      <Navbar/>
-      <Allrouting/>
-      <hr/>
-     <Footer/>
-    </div>
-  );
+    <div>App</div>
+  )
 }
 
 export default App;
