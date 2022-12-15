@@ -1,12 +1,13 @@
 import React from 'react'
-import {Box, Button, Checkbox, FormControl, FormLabel, Heading, Icon, Image, Input, List, ListIcon, ListItem, SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs, Text, UnorderedList} from "@chakra-ui/react";
+import {Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Checkbox, FormControl, FormLabel, Heading, Icon, Image, Input, List, ListIcon, ListItem, SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs, Text, UnorderedList} from "@chakra-ui/react";
 import { MdCheckCircle } from 'react-icons/md';
 import {AiFillCloseCircle,AiOutlineArrowRight} from "react-icons/ai"
 const Plan = () => {
   return (
     <Box>
         <Box>
-            <Heading fontSize={"42px"} fontWeight="500" lineHeight={"48px"} marginBottom="10px" color="#4a4a3b">Choose a plan that works for you</Heading>
+            <Heading display={{base:"inherit",sm:"inherit",md:"inherit",lg:"none","2xl":"none"}} fontSize={"42px"} fontWeight="500" lineHeight={"48px"} marginBottom="10px" color="#4a4a3b">Compare all Plans</Heading>
+            <Heading display={{base:"none",sm:"none",md:"none",lg:"inherit","2xl":"inherit"}} fontSize={"42px"} fontWeight="500" lineHeight={"48px"} marginBottom="10px" color="#4a4a3b">Choose a plan that works for you</Heading>
         </Box>
         <Box w={"100%"}>
             <Tabs justifyContent={"center"} align="center" variant="unstyled" gap="3rem">
@@ -149,17 +150,17 @@ const Plan = () => {
                                     </Box>
                                 </Box>
                             </SimpleGrid>
-                            <Box display={"flex"} w="70%" justifyContent={"center"} m="auto" gap="77px">
+                            <Box display={{base:"none",sm:"none",md:"none",lg:"flex",xl:"flex","2xl":"flex"}} w="70%" justifyContent={"center"} m="auto" gap="77px">
                                 <Button color="white" mt="30px" colorScheme={"#007FAA"} w="25%" backgroundColor="#007FAA">SIGN UP</Button>
                                 <Button color="white" mt="30px" colorScheme={"#671E75"} w="25%" backgroundColor="#671E75">SIGN UP</Button>
                                 <Button color="white" mt="30px" colorScheme={"#007FAA"} w="25%" backgroundColor="#007FAA">CONTACT SALES</Button>
                             </Box>
-                            <Box mt="20px" textAlign={"left"} w="70%" lineHeight={"2em"} fontSize="13px" color="#4a4a3b">
+                            <Box display={{base:"none",sm:"none",md:"none",lg:"inherit",xl:"inherit","2xl":"inherit"}}  mt="20px" textAlign={"left"} w="70%" lineHeight={"2em"} fontSize="13px" color="#4a4a3b">
                                 <Text>*Displayed pricing represents a 20% or more savings per user per month compared to individual Advantage and Premier plans</Text>
                                 <Text>**Rs 36 per additional response, SurveyMonkey Audience responses sold seperately</Text>
                                 <Text>***Add-on features available with Enterprise plan must be purchased separately</Text>
                             </Box>
-                            <Box w="70%" mt="40px">
+                            <Box w="70%" mt="40px" display={{base:"none",sm:"none",md:"none",lg:"inherit",xl:"inherit","2xl":"inherit"}} >
                                 <Text fontWeight={"bold"} backgroundColor="#F9BE0040" p="7px">SurveyMonkey Audience includes access to Paid Features</Text>
                                 <Box display={"flex"}>
                                     <Box>
@@ -227,30 +228,85 @@ const Plan = () => {
                                     </Box>
                                 </Box>
                             </Box>
-                            <Box mt="15px" w="70%">
+                            <Box w="70%" mt="25px" display={{base:"inherit",sm:"inherit",md:"inherit",lg:"none",xl:"none","2xl":"none"}}>
+                                <Heading size="lg" fontWeight={"600"}>Get started for free with our Basic plan.</Heading>
+                                <Text>You get unlimited surveys, 10 questions per survey!</Text>
+                                <Button color="white" backgroundColor={"green"} mt="30px" w="100%">SIGN UP</Button>
+                            </Box>
+                            <Box mt="15px" w="70%" display={{base:"none",sm:"none",md:"none",lg:"inherit",xl:"inherit","2xl":"inherit"}}>
                                 <Heading size="md" fontWeight={"400"}>Just need the basics? <Button variant="link" fontSize={"lg"} color="#007FAA">Get started for free.</Button></Heading>
                                 <Button variant="link" fontWeight={"700"} mt="15px" fontSize="lg" color={"#007FAA"}>SEE ALL PLAN FEATURES <Icon boxSize={17} mt="3px" as={AiOutlineArrowRight}/> </Button>
                             </Box>
-                            <Box mt="20px" w="70%">
-                                <Heading size="lg">More about plans and pricing</Heading>
-                                <SimpleGrid columns={{base:2,sm:1,md:1,lg:2,"2xl":2}} textAlign="left" gap="50px" lineHeight={"2rem"} mt="50px">
-                                    <Box>
-                                        <Text fontWeight={"500"} mb="10px">How much does SurveyMonkey cost?</Text>
-                                        <Text>The Basic plan is FREE.</Text>
-                                        <Text>The standard Monthly plan costs Rs 899 a month.</Text>
-                                        <Text>The Standard Annual plan costs Rs 699 a month, billed annually.</Text>
-                                        <Text>The Advantage plan costs Rs 1,999 a month, billed annually.</Text>
-                                        <Text>The Premier plan costs Rs 4,999 a month, billed annually.</Text>
-                                        <Text>The Team Advantage plan costs RS 1,550 a month, per user, billed annually.</Text>
-                                        <Text>The Team Premier plan costs Rs 3,800 a month, per user, billed annually.</Text>
-                                    </Box>
-                                    <Box>
-                                        <Text fontWeight={"500"} mb="10px">Do you offer discounts for teams?</Text>
-                                        <Text>We offer discounts when you sign up for business plans that include 3 or more people. With Team Advantage and Team Premier plans, you'll save 20% or more over personal plans and get access to additional collaboration features. <Button variant="link" color="#007FAA">See pricing <Icon as={AiOutlineArrowRight}/></Button></Text>
-                                        <Text fontWeight={"500"} mt="15px" mb="10px">Do you offer plans for corporate needs?</Text>
-                                        <Text>Our Enterprise plans offer HIPAA compliance, advanced security, and admin features for increased governance and control. <Button variant="link" color="#007FAA">Contact Sales<Icon as={AiOutlineArrowRight}/></Button></Text>
-                                    </Box>
-                                </SimpleGrid>
+                            <Box mt="50px" w="70%">
+                                <Heading size={{base:"md",sm:"md",md:"md",lg:"lg","2xl":"lg"}}>More about plans and pricing</Heading>
+                                <Box display={{base:"none",sm:"none",md:"none",lg:"inherit","2xl":"inherit"}}>
+                                    <SimpleGrid columns={{base:2,sm:1,md:1,lg:2,"2xl":2}} textAlign="left" gap="50px" lineHeight={"2rem"} mt="50px">
+                                        <Box>
+                                            <Text fontWeight={"500"} mb="10px">How much does SurveyMonkey cost?</Text>
+                                            <Text>The Basic plan is FREE.</Text>
+                                            <Text>The standard Monthly plan costs Rs 899 a month.</Text>
+                                            <Text>The Standard Annual plan costs Rs 699 a month, billed annually.</Text>
+                                            <Text>The Advantage plan costs Rs 1,999 a month, billed annually.</Text>
+                                            <Text>The Premier plan costs Rs 4,999 a month, billed annually.</Text>
+                                            <Text>The Team Advantage plan costs RS 1,550 a month, per user, billed annually.</Text>
+                                            <Text>The Team Premier plan costs Rs 3,800 a month, per user, billed annually.</Text>
+                                        </Box>
+                                        <Box>
+                                            <Text fontWeight={"500"} mb="10px">Do you offer discounts for teams?</Text>
+                                            <Text>We offer discounts when you sign up for business plans that include 3 or more people. With Team Advantage and Team Premier plans, you'll save 20% or more over personal plans and get access to additional collaboration features. <Button variant="link" color="#007FAA">See pricing <Icon as={AiOutlineArrowRight}/></Button></Text>
+                                            <Text fontWeight={"500"} mt="15px" mb="10px">Do you offer plans for corporate needs?</Text>
+                                            <Text>Our Enterprise plans offer HIPAA compliance, advanced security, and admin features for increased governance and control. <Button variant="link" color="#007FAA">Contact Sales<Icon as={AiOutlineArrowRight}/></Button></Text>
+                                        </Box>
+                                    </SimpleGrid>
+                                </Box>
+                            </Box>
+                            <Box display={{base:"inherit",sm:"inherit",md:"inherit",lg:"none","2xl":"none"}}>
+                                <Accordion allowToggle>
+                                    <AccordionItem>
+                                        <h2>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                How much does SurveyMonkey cost?
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        </h2>
+                                        <AccordionPanel textAlign={"left"} pb={4}>
+                                            The Team Advantage plan costs Rs 1,550 a month, per user, billed annually.
+                                            The Team Premier plan costs Rs 3,800 a month, per user, billed annually.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <h2>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Do you offer discounts for teams? 
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        </h2>
+                                        <AccordionPanel pb={4} textAlign="left">
+                                            We offer discounts when you sign up for business plans that include 3 or more
+                                            people. With Team Advantage and Team Premier plans, you'll save 20% or more
+                                            over personal plans and get access to additional collaboration features. <Button variant="link" color="#007FAA">See Pricing <Icon as={AiOutlineArrowRight} /></Button>
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <h2>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Corporate needs 
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        </h2>
+                                        <AccordionPanel pb={4} textAlign="left">
+                                        Our Enterprise plans offer HIPAA compliance, advanced security, and admin features for increased governance and control. <Button variant="link" color="#007FAA">Contact Sales<Icon as={AiOutlineArrowRight}/></Button>
+                                        </AccordionPanel>
+                                    </AccordionItem>
+                                </Accordion>
                             </Box>
                         </Box>
                     </TabPanel>
@@ -292,7 +348,7 @@ const Plan = () => {
                                         <Button variant="link">See all plan features</Button>
                                     </Box>
                                 </Box>
-                                <Box position="relative" _hover={{border: "1px solid #00BF6F"}} border=".5px solid #00BF6F" p="10px" pt="0" pr="0" mt="-35px">
+                                <Box position="relative" _hover={{border: "1px solid #00BF6F"}} border=".5px solid #00BF6F" p="10px" pt="0" pr="0" mt={{base:"15px",sm:"15px",md:"15px",xl:"-35px","2xl":"-35px"}}>
                                     <Box float="right" right="0" top="0" position={"relative"} zIndex="1" overflow={"hidden"} w="96px" h="96px" textAlign={"right"}>
                                         <Text transform="translate(-50%,-50%) rotate(45deg) translateY(-11px)" w="184px" position={"absolute"} top="50%" left="50%" backgroundColor={"#00BF6F"} fontSize="10px" fontWeight={"bold"} color="white" textAlign={"center"} lineHeight="20px" _before={{backgroundColor:"#00BF6F",content:"''",position:"absolute",left:0,top:0,zIndex:-1,h:"3px",w:"10px",borderTopLeftRadius:"3px"}} >BEST VALUE</Text>
                                     </Box>    
@@ -346,15 +402,15 @@ const Plan = () => {
                                     </Box>
                                 </Box>
                             </SimpleGrid>
-                            <Box display={"flex"} w="70%" justifyContent={"center"} m="auto" gap="77px">
+                            <Box display={{base:"none",sm:"none",md:"none",lg:"flex",xl:"flex","2xl":"flex"}} w="70%" justifyContent={"center"} m="auto" gap="77px">
                                 <Button color="white" mt="30px" colorScheme={"#007FAA"} w="25%" backgroundColor="#05467E">SIGN UP</Button>
                                 <Button color="white" mt="30px" colorScheme={"#671E75"} w="25%" backgroundColor="#00BF6F">SIGN UP</Button>
                                 <Button color="white" mt="30px" colorScheme={"#007FAA"} w="25%" backgroundColor="#007FAA">SIGN UP</Button>
                             </Box>
-                            <Box mt="20px" textAlign={"left"} w="70%" lineHeight={"2em"} fontSize="13px" color="#4a4a3b">
+                            <Box display={{base:"none",sm:"none",md:"none",lg:"inherit",xl:"inherit","2xl":"inherit"}} mt="20px" textAlign={"left"} w="70%" lineHeight={"2em"} fontSize="13px" color="#4a4a3b">
                                 <Text>*Rs 36 per additional response. SurveyMonkey responses sold seperately.</Text>
                             </Box>
-                            <Box w="70%" mt="40px">
+                            <Box display={{base:"none",sm:"none",md:"none",lg:"inherit",xl:"inherit","2xl":"inherit"}} w="70%" mt="40px">
                                 <Text fontWeight={"bold"} backgroundColor="#F9BE0040" p="7px">SurveyMonkey Audience includes access to Paid Features</Text>
                                 <Box display={"flex"}>
                                     <Box>
@@ -422,29 +478,85 @@ const Plan = () => {
                                     </Box>
                                 </Box>
                             </Box>
-                            <Box mt="15px" w="70%">
+                            <Box w="70%" mt="25px" display={{base:"inherit",sm:"inherit",md:"inherit",lg:"none",xl:"none","2xl":"none"}}>
+                                <Heading size="lg" fontWeight={"600"}>Get started for free with our Basic plan.</Heading>
+                                <Text>You get unlimited surveys, 10 questions per survey!</Text>
+                                <Button color="white" backgroundColor={"green"} mt="30px" w="100%">SIGN UP</Button>
+                            </Box>
+                            <Box mt="15px" w="70%" display={{base:"none",sm:"none",md:"none",lg:"inherit",xl:"inherit","2xl":"inherit"}}>
                                 <Heading size="md" fontWeight={"400"}>Just need the basics? <Button variant="link" fontSize={"lg"} color="#007FAA">Get started for free.</Button></Heading>
                                 <Button variant="link" fontWeight={"700"} mt="15px" fontSize="lg" color={"#007FAA"}>SEE ALL PLAN FEATURES <Icon boxSize={17} mt="3px" as={AiOutlineArrowRight}/> </Button>
                             </Box>
-                            <Box mt="20px" w="70%">
-                                <Heading size="lg">More about plans and pricing</Heading>
-                                <SimpleGrid columns={{base:2,sm:1,md:1,lg:2,"2xl":2}} textAlign="left" gap="50px" lineHeight={"2rem"} mt="50px">
-                                    <Box>
-                                        <Text fontWeight={"500"} mb="10px">How much does SurveyMonkey cost?</Text>
-                                        <Text>The Basic plan is FREE.</Text>
-                                        <Text>The standard Monthly plan costs Rs 899 a month.</Text>
-                                        <Text>The Advantage plan costs Rs 1,999 a month, billed annually.</Text>
-                                        <Text>The Premier plan costs Rs 4,999 a month, billed annually.</Text>
-                                        <Text>The Team Advantage plan costs RS 1,550 a month, per user, billed annually.</Text>
-                                        <Text>The Team Premier plan costs Rs 3,800 a month, per user, billed annually.</Text>
-                                    </Box>
-                                    <Box>
-                                        <Text fontWeight={"500"} mb="10px">Do you offer discounts for teams?</Text>
-                                        <Text>We offer discounts when you sign up for business plans that include 3 or more people. With Team Advantage and Team Premier plans, you'll save 20% or more over personal plans and get access to additional collaboration features. <Button variant="link" color="#007FAA">See pricing <Icon as={AiOutlineArrowRight}/></Button></Text>
-                                        <Text fontWeight={"500"} mt="15px" mb="10px">Do you offer plans for corporate needs?</Text>
-                                        <Text>Our Enterprise plans offer HIPAA compliance, advanced security, and admin features for increased governance and control. <Button variant="link" color="#007FAA">Contact Sales<Icon as={AiOutlineArrowRight}/></Button></Text>
-                                    </Box>
-                                </SimpleGrid>
+                            <Box mt="50px" w="70%">
+                                <Heading size={{base:"md",sm:"md",md:"md",lg:"lg","2xl":"lg"}}>More about plans and pricing</Heading>
+                                <Box display={{base:"none",sm:"none",md:"none",lg:"inherit","2xl":"inherit"}}>
+                                    <SimpleGrid columns={{base:2,sm:1,md:1,lg:2,"2xl":2}} textAlign="left" gap="50px" lineHeight={"2rem"} mt="50px">
+                                        <Box>
+                                            <Text fontWeight={"500"} mb="10px">How much does SurveyMonkey cost?</Text>
+                                            <Text>The Basic plan is FREE.</Text>
+                                            <Text>The standard Monthly plan costs Rs 899 a month.</Text>
+                                            <Text>The Standard Annual plan costs Rs 699 a month, billed annually.</Text>
+                                            <Text>The Advantage plan costs Rs 1,999 a month, billed annually.</Text>
+                                            <Text>The Premier plan costs Rs 4,999 a month, billed annually.</Text>
+                                            <Text>The Team Advantage plan costs RS 1,550 a month, per user, billed annually.</Text>
+                                            <Text>The Team Premier plan costs Rs 3,800 a month, per user, billed annually.</Text>
+                                        </Box>
+                                        <Box>
+                                            <Text fontWeight={"500"} mb="10px">Do you offer discounts for teams?</Text>
+                                            <Text>We offer discounts when you sign up for business plans that include 3 or more people. With Team Advantage and Team Premier plans, you'll save 20% or more over personal plans and get access to additional collaboration features. <Button variant="link" color="#007FAA">See pricing <Icon as={AiOutlineArrowRight}/></Button></Text>
+                                            <Text fontWeight={"500"} mt="15px" mb="10px">Do you offer plans for corporate needs?</Text>
+                                            <Text>Our Enterprise plans offer HIPAA compliance, advanced security, and admin features for increased governance and control. <Button variant="link" color="#007FAA">Contact Sales<Icon as={AiOutlineArrowRight}/></Button></Text>
+                                        </Box>
+                                    </SimpleGrid>
+                                </Box>
+                            </Box>
+                            <Box display={{base:"inherit",sm:"inherit",md:"inherit",lg:"none","2xl":"none"}}>
+                                <Accordion allowToggle>
+                                    <AccordionItem>
+                                        <h2>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                How much does SurveyMonkey cost?
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        </h2>
+                                        <AccordionPanel textAlign={"left"} pb={4}>
+                                            The Team Advantage plan costs Rs 1,550 a month, per user, billed annually.
+                                            The Team Premier plan costs Rs 3,800 a month, per user, billed annually.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <h2>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Do you offer discounts for teams? 
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        </h2>
+                                        <AccordionPanel pb={4} textAlign="left">
+                                            We offer discounts when you sign up for business plans that include 3 or more
+                                            people. With Team Advantage and Team Premier plans, you'll save 20% or more
+                                            over personal plans and get access to additional collaboration features. <Button variant="link" color="#007FAA">See Pricing <Icon as={AiOutlineArrowRight} /></Button>
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <h2>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Corporate needs 
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        </h2>
+                                        <AccordionPanel pb={4} textAlign="left">
+                                        Our Enterprise plans offer HIPAA compliance, advanced security, and admin features for increased governance and control. <Button variant="link" color="#007FAA">Contact Sales<Icon as={AiOutlineArrowRight}/></Button>
+                                        </AccordionPanel>
+                                    </AccordionItem>
+                                </Accordion>
                             </Box>
                         </Box>
                     </TabPanel>
