@@ -1,0 +1,144 @@
+ .AvnishDiv-1{ 
+    width:99%;
+    height:auto;
+    /* border:1px solid red; */
+    display: flex;
+    justify-content:center;
+    margin: auto;
+    background-color: #b0e7e8;
+   
+   }
+ 
+   .AvnishDiv-2{
+     width: 50%;
+     height: 300px; 
+    /* border:1px solid red; */
+    margin:auto;
+    padding:10px;
+    margin-top:15% 
+    
+    }
+   .heading_1{
+    color:#224F3C;
+    font-size: 32px;
+   }
+   .para_1{
+    color:#224F3C;
+    font-size: 18px;
+   }
+   .AvnishButton-1 {
+    display: flex;
+    justify-content: space-around;
+    gap:30px;
+   }
+   .btn-1{
+    font-size: 15px;
+    background-color: #F9BE00;
+    color:#1E2124;
+    width: 40%;
+    height: 50px;
+    border:none;
+    border-radius: 5px;
+
+   }
+   .btn-2{
+    font-size: 15px;
+    background-color: #eee;
+    color:#1E2124;
+    width: 40%;
+    height: 50px;
+    
+    font-family: "National","Helvetica Neue";
+    border-radius: 5px;
+   }
+   .imgDiv img{
+    width: 80%;
+    height: 600px;
+    /* border: 1px solid black; */
+   } 
+
+       /* {Who is your survey audience?} */
+
+  .AvnishDiv-3{
+    width: 80%;
+    height: auto;
+    border: 1px solid black;
+    margin: auto;
+    background-color: #EEEEEE;
+    margin-top: 50px;
+
+  }
+  .btn-3{
+  
+    display: flex;
+    justify-content: space-evenly;
+  }
+/* .AvnishDiv-3:hover{
+    box-shadow: 0 8px 16px 0 rgba(233, 20, 20, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+} */
+.box:hover{
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+/* ---------------------------------------------------------- */
+ .mainLogoImgDiv{
+  margin-top: 100px;
+  width: 90%;
+  border: 2px solid red;
+  margin-left: 60px;
+ }
+.logImage{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+
+}
+.logImage img{
+  width: 20%;
+  height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       @media screen and (min-device-width: 200px) and (max-device-width: 768px) {
+        .AvnishDiv-1{ 
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        .AvnishButton-1 {
+            display: flex;
+            flex-flow: column nowrap;
+           }
+          .btn-1{
+            width: 100%;
+            height: 50px;
+          }
+          .btn-2{
+            width: 100%;
+            height: 50px;
+          }
+          .imgDiv img{
+            margin-top: 200px;
+            }
+       }
+
+      
