@@ -3,7 +3,7 @@ import {Route, Routes} from "react-router-dom"
 import Home from '../pages/Home/Home'
 
 import Login from '../pages/Login/Login'
-import Resources from '../pages/resources/Resources'
+import Resources from "../pages/resources/resources"
 import Signup from '../pages/Signup/Signup'
 import SurveyMonkey from '../pages/SurveyMonkey/SurveyMonkey'
 const Allrouting = () => {
