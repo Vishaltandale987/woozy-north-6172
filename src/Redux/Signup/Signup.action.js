@@ -8,7 +8,7 @@ export const signup = (creds)=> (dispatch)=>{
     let flag=false;
     dispatch({type: SIGNUP_LOADING});
 
-    existUser.map((el)=>{if(el.email===creds.email){
+    existUser.forEach((el)=>{if(el.email===creds.email){
       return flag=true;
     }})
 

@@ -12,12 +12,13 @@ import {
     Heading,
     Text,
     useColorModeValue,
-    Link,
+    Link
   } from '@chakra-ui/react';
   import { useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
   import {useDispatch, useSelector} from "react-redux";
 import { signup } from '../../Redux/Signup/Signup.action';
+
 
 // export const existUser= JSON.parse(localStorage.getItem("userDetails"))||[];
 
