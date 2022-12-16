@@ -19,14 +19,14 @@ const Solutions = () => {
         return (
           <>
             {sizes.map((size) => (
-              <Button
+              <Text
             //   style={{border:"none"}}
             border={"none"}
            boxShadow={shadow}
                 onClick={() => handleSizeClick(size)}
                 key={size}
                 m={4}
-              >{`${size}`}</Button>
+              >{`${size}`}</Text>
             ))}
       
             <Modal onClose={onClose}  isOpen={isOpen}>
