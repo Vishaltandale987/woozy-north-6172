@@ -105,13 +105,67 @@
 
 
 
+/* ----------------------------plan---------------------------------- */
+.LearnMore{
+  position: relative;
+  text-align: center;
+  color: white;
+  /* border: 1px solid red; */
+}
+.LearnCenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 500;
+  /* border: 1px solid red; */
+  width: 40%;
+  height: 200px;
+}
+.LearnBtn{
+  margin-top: 30px;
+  /* border: 1px solid red; */
+}
+.temp{
+  margin-top: 100px;
+
+}
+.temp div{
+  margin-top: 30px;
+}
+.HeadingTeamplet{
+  margin: auto;
+  width: 40%;
+/* border: 1px solid red; */
+font-size: 30px;
+font-weight: 500;
+}
+.ParaTeamplet{
+  margin: auto;
+  width: 40%;
+  /* border:1px solid red; */
+  font-size: 20px;
+  font-weight: 500;
+}
 
 
+.feedback{
+  width: 99%;
+  height: 800px;
+  background-color: #EEEEEE;
+  color: #000;
+  /* border: 1px solid red; */
+  margin: auto;
 
-
-
-
-
+}
+.feedbackHeading{
+  margin:auto;
+  width: 44%;
+  height: 200px;
+  
+  /* border: 1px solid red; */
+}
 
 
 
@@ -138,6 +192,40 @@
           }
           .imgDiv img{
             margin-top: 200px;
+            }
+            .plan_2{
+              flex-flow: column;
+            }
+            .LearnCenter{
+              width: 100%
+            }
+
+            .HeadingTeamplet{
+              margin: auto;
+              width: 90%;
+            /* border: 1px solid red; */
+            font-size: 30px;
+            font-weight: 500;
+            }
+            .ParaTeamplet{
+              margin: auto;
+              width: 80%;
+              /* border:1px solid red; */
+              font-size: 20px;
+              font-weight: 500;
+              padding: 10px;
+             
+            }
+            .feedback{
+             
+              height: auto;
+              
+            
+            }
+            .feedbackHeading{
+              
+              width: 100%;
+             
             }
        }
 

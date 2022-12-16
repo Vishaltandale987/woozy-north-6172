@@ -1,7 +1,11 @@
 import React from 'react'
-import {Button, Stack,Grid,GridItem,Heading, Img} from "@chakra-ui/react"
+import {Button, Stack,Grid,GridItem,Heading, Image} from "@chakra-ui/react"
 
 import "./Home.css"
+import PriceWrapper from './expmle'
+import PriceWrapper2 from "./expmle2"
+import PriceWrapper3 from './exple3'
+import PriceWrapper4 from "./last"
 const Home = () => {
   return (
     <home>
@@ -37,18 +41,28 @@ const Home = () => {
 
             </div>
         <Grid
-            h='200px'
+            h='500px'
             templateRows='repeat(2, 1fr)'
             templateColumns='repeat(5, 1fr)'
-            gap={4}
+            gap={1}
              marginTop="40px"
            
             >
-           <GridItem rowSpan={2} colSpan={1} bg='tomato' />
-            <GridItem colSpan={2} bg='papayawhip' />
-            <GridItem colSpan={2} bg='papayawhip' />
-            <GridItem colSpan={2} bg='tomato' />
-            <GridItem colSpan={2} bg='tomato' />
+           <GridItem rowSpan={4} colSpan={1} h='200px' >
+           <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
+            </GridItem>
+           <GridItem colSpan={2} >
+            <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
+            </GridItem>
+            <GridItem colSpan={2}>
+            <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
+            </GridItem>
+            <GridItem colSpan={2}>
+            <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
+            </GridItem>
+            <GridItem colSpan={2}>
+              <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
+            </GridItem>
             </Grid>
         </div>
        
@@ -66,7 +80,63 @@ const Home = () => {
          </div>
          </div>
       
+      {/* --------------------------------------------------------------------------- */}
 
+  
+
+      <PriceWrapper/>
+    
+       <div className='LearnMore'>
+          <Image src="https://prod.smassets.net/assets/cms/sm/uploads//AudienceBG-NEW.png" h="400px"alt=""/>
+          <div className='LearnCenter'>
+          Looking for targeted responses to your surveys?
+Get the responses you need in minutes with SurveyMonkey Audience, our trusted panel of more than 175 million respondents from across the globe.
+          <div className='LearnBtn'>
+          <Button color="black"> Learn More</Button>
+          </div>
+          </div>
+
+       </div>
+
+
+        <div className='temp'>
+        <div className='HeadingTeamplet'>
+          <h1> Start with an expert-written template</h1>
+        </div>
+        <div className='ParaTeamplet'>
+          <p>
+          Our <span style={{color:"blue",fontSize:"20px", cursor:"pointer",}} > sample survey templates </span> make it easy for you to start 
+          collecting feedback in just minutes. Explore hundreds of questions
+           across different survey types, all designed to get you accurate 
+           results you can rely on.
+          </p>
+        </div>
+        </div>
+      {/* ------------------------------------------------------------------------------------------/ */}
+
+      <div className='temp'>
+        <div className='HeadingTeamplet'>
+          <h1> Tools that spark business breakthroughs</h1>
+        </div>
+        <div className='ParaTeamplet'>
+          <p>
+          
+             Discover specialized toolkits designed for your role and industry.
+           results you can rely on.
+          </p>
+        </div>
+        </div>
+
+        <PriceWrapper2/>
+
+        <div className='feedback'>
+          <div className='feedbackHeading'>
+          <Heading as='h4' size={"lg"}>  Go beyond collecting feedback—deliver better experiences that drive your business</Heading>
+          </div>
+          <PriceWrapper3/>
+        </div>
+
+        <PriceWrapper4/>
     </home>
   )
 }
