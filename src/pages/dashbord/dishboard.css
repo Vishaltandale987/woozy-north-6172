@@ -1,0 +1,25 @@
+.box{
+display: grid;
+grid-template-columns: repeat(2 ,1fr);
+/* border: 1px solid black; */
+margin-left: 17em;
+width: 30em;
+
+
+}
+.img{
+    /* border: 1px solid black; */
+    width: 10em;
+}
+
+@media screen and (min-width: 480px) {
+    .box{
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+      
+   
+        
+        
+    }
+}
+
