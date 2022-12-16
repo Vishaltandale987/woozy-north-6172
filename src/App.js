@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import NewSurvey from './pages/CreateSurvey/NewSurvey';
 
 function App() {
   return (
     <div className="App">
-      <h1>-woozy-north-6172</h1>
+      <NewSurvey/>
     </div>
   );
 }
