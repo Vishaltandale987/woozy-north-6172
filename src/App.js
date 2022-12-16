@@ -6,9 +6,8 @@ import Dashbord from './pages/dashbord/Dashbord';
 
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-      <Solutions/>
+    <div className="App">
+        
     </div>
   )
 }
