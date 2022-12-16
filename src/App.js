@@ -9,7 +9,7 @@ function App() {
     <div className="App">
 
       <h1>woozy-north-6172</h1>
-
+      <Dashbord/>
      
 
     </div>
