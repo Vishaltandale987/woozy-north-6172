@@ -1,10 +1,16 @@
+import React from 'react'
 import './App.css';
+import Navbar from './compounts/navbar/Navbar';
+import Solutions from './compounts/navbar/Solutions';
+import Dashbord from './pages/dashbord/Dashbord';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     </div>
-  );
+    <div>
+      <Navbar/>
+      <Solutions/>
+    </div>
+  )
 }
 
 export default App;
