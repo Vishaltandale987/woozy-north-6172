@@ -1,19 +1,16 @@
-
+import React from 'react'
 import './App.css';
+import Navbar from './compounts/navbar/Navbar';
+import Solutions from './compounts/navbar/Solutions';
 import Dashbord from './pages/dashbord/Dashbord';
 
-
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-
-      <h1>woozy-north-6172</h1>
-
-     
-
+    <div>
+      <Navbar/>
+      <Solutions/>
     </div>
-  );
+  )
 }
 
 export default App;

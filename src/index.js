@@ -14,9 +14,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 
   <ReactProvider store={store}>
-  <ChakraProvider>
-    <App />
-  </ChakraProvider>
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
   </ReactProvider>
 
 
