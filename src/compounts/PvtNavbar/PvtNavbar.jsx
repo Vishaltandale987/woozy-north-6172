@@ -2,7 +2,7 @@ import {
   Box,
   Flex,
   HStack,
-  Link,
+
   IconButton,
   Button,
   Menu,
@@ -18,6 +18,7 @@ import {
 import { HamburgerIcon, CloseIcon, AddIcon, TriangleDownIcon } from '@chakra-ui/icons';
 import {useSelector} from "react-redux";
 import Company_logo from "./assets/company-logo.png"
+import { Link } from 'react-router-dom';
 
 const Links = ['Dashboard', 'My Surveys', 'Plan & Pricings'];
 
@@ -47,9 +48,29 @@ export default function PvtNavbar() {
               as={'nav'}
               spacing={8}
               display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <Link key={link}>{link}</Link>
-              ))}
+              {/* {Links.map((link) => {
+
+              
+
+                if(link === "Dashbord"){
+                  return <Link to="/dashbord">Dashbord</Link>
+                  
+                }else if( link ==="My Surveys"){
+                  return <Link to="/">Survey</Link>
+
+                }else{
+                  return <Link to="/">Final</Link>
+                  
+                }
+                // <Link key={link}>{link}</Link>
+              })} */}
+
+              <Link to="/dashbord">Dashbord</Link>
+              <Link to="/surveys">Surveys</Link>
+              <Link to="/">Final</Link>
+
+
+              
             </HStack>
           </HStack>
           <Flex alignItems={'center'} >

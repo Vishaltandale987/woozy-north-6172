@@ -1,3 +1,4 @@
+import { json, Navigate } from "react-router-dom"
 import { LOGIN_ERROR, LOGIN_LOADING, LOGIN_SUCCESS, LOGOUT } from "./Login.type"
 
 const initialState={
@@ -17,6 +18,7 @@ export const loginReducer=(state=initialState,{type,payload})=>{
         }
         case LOGIN_SUCCESS:{
             alert("Login Successful")
+            localStorage.setItem("login_data",JSON.stringify(payload))
             return{
                 ...state,
                 loading:false,

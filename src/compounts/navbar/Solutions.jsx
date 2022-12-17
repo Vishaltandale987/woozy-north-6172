@@ -1,5 +1,5 @@
-import { Text,Box,useDisclosure,Button,Modal,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalBody,ModalFooter } from '@chakra-ui/react'
-import React,{useState} from 'react'
+import { Text,Box,useDisclosure,Modal,ModalOverlay,ModalContent,ModalHeader,ModalCloseButton,ModalBody,ModalFooter } from '@chakra-ui/react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -13,7 +13,7 @@ const Solutions = () => {
           onOpen()
         }
       
-        const sizes = ['Products ▼','Solutions ▼', 'Resources ▼', 'Plans & Pricing ▼'];
+        const sizes = ['Products ▼','Solutions ▼', 'Resources ▼'];
         const shadow="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
       
         return (
@@ -28,6 +28,9 @@ const Solutions = () => {
                 m={4}
               >{`${size}`}</Text>
             ))}
+            <Link to="/plan">
+            <h1>Plans & Pricing</h1>
+            </Link>
       
             <Modal onClose={onClose}  isOpen={isOpen}>
               <ModalOverlay />

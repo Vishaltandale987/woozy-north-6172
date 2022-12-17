@@ -2,6 +2,7 @@ import React from 'react'
 import {Box, Button, Heading, Input, Radio, RadioGroup, Select} from "@chakra-ui/react";
 import { useState } from 'react';
 import Survyed from './Survyed';
+import PvtNavbar from '../../compounts/PvtNavbar/PvtNavbar';
 const NewSurvey = () => {
     let [question,setQuestion] = useState([]);
     let [input,setInput] = useState("");
@@ -17,6 +18,7 @@ const NewSurvey = () => {
     }
   return (
     <Box>
+        <PvtNavbar/>
         <Box boxShadow={"xl"}  w="50%" p="20px" m="auto" mb="20px">
             <Heading color="green" size="xl">Enter your Survey</Heading>
         </Box>

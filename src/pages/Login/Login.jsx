@@ -19,8 +19,10 @@ import {
   ModalBody,
   ModalCloseButton,
   } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
   import { useDispatch, useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
+import Navbar from '../../compounts/navbar/Navbar';
 import { login } from '../../Redux/Login/Login.action';
   
   export default function Login() {
@@ -37,11 +39,25 @@ import { login } from '../../Redux/Login/Login.action';
   
     const handleLogin=()=>{
         dispatch(login(user));
-    }
+
+      }
+
+      useEffect(() => {
+      
+        if(state.existingUser){
+          <Navigate to="/dashbord"/>    
+        }
+      }, [state])
+      
+
 
 
     return (
+      <>
+      <Navbar/>
+
       <Flex
+      
         minH={'100vh'}
         align={'center'}
         justify={'center'}
@@ -146,5 +162,7 @@ import { login } from '../../Redux/Login/Login.action';
           </Box>
         </Stack>
       </Flex>
+      </>
+
     );
   }

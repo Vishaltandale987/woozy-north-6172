@@ -1,4 +1,4 @@
-import { Box, Heading, Radio, RadioGroup } from '@chakra-ui/react'
+import { Box, Heading, Input, Radio, RadioGroup } from '@chakra-ui/react'
 import React from 'react'
 
 const Survyed = ({option,title}) => {
@@ -15,7 +15,19 @@ const Survyed = ({option,title}) => {
                 <Radio>Good</Radio>
                 <Radio>Very Good</Radio>
             </RadioGroup>
+
+
         </Box>
+
+        <Box display={option==="mcq"?"inherit":"none"}>
+                <Input placeholder='Enter Options'/>
+                <Input placeholder='Enter Options'/>
+                <Input placeholder='Enter Options'/>
+                <Input placeholder='Enter Options'/>
+            </Box>
+            <Box display={option==="free"?"inherit":"none"}>
+                <Input placeholder='Enter Answer'/>
+            </Box>
     </Box>
   )
 }

@@ -13,41 +13,45 @@ import {
   Input,
   Stack,
   Select,
-  Text
+  Text,
 } from "@chakra-ui/react";
-
+import PvtNavbar from "../../compounts/PvtNavbar/PvtNavbar";
 
 function Dashbord() {
   const [data, setdata] = useState({
-    name:"", survey:""
+    name: "",
+    survey: "",
   });
   const { isOpen, onOpen, onClose } = useDisclosure();
 
- const changeHandle = (e) => {
-   const name = e.target.name;
-   const value = e.target.value;
+  const changeHandle = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
 
-  setdata({ ...data, [name]:value})
- }
- 
+    setdata({ ...data, [name]: value });
+  };
 
+  const submit = () => {
+    let storedata = JSON.parse(localStorage.getItem("dashbord_data")) || [];
 
+    storedata.push(data);
+    localStorage.setItem("dashbord_data", JSON.stringify(storedata));
+    setdata({
+      name: "",
+      survey: "",
+    });
+    onClose();
+  };
 
-
- const submit = () => {
-  let storedata = JSON.parse(localStorage.getItem("dashbord_data")) || [];
- 
-  storedata.push(data)
-  localStorage.setItem("dashbord_data", JSON.stringify(storedata));
-  setdata({
-    name:"", survey:""
-  });
-  onClose();
- } 
+  // console.log("faihahfoahd")
 
   return (
     <div>
-      <p><b> Create a Survey </b></p>
+      <PvtNavbar/>
+      
+      <p>
+        <b> Create a Survey </b>
+      </p>
       <h2>How would you like to get started?</h2>
       <div className="box">
         <div className="img">
@@ -79,16 +83,17 @@ function Dashbord() {
         </div>
       </div>
 
-
       <div className="modal">
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader><b>  New Survey </b></ModalHeader>
+            <ModalHeader>
+              <b> New Survey </b>
+            </ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <Stack spacing={2}>
-              <Text >   Survey Title </Text>
+                <Text> Survey Title </Text>
                 <Input
                   placeholder="Survey name"
                   _placeholder={{ opacity: 1, color: "gray.500" }}
@@ -98,13 +103,13 @@ function Dashbord() {
                   name="name"
                 />
 
-<Text >   Survey Category Optional </Text>
+                <Text> Survey Category Optional </Text>
 
-                <Select placeholder="Survey"
-              
-                onChange={changeHandle}
-                value={data.survey}
-                name="survey"
+                <Select
+                  placeholder="Survey"
+                  onChange={changeHandle}
+                  value={data.survey}
+                  name="survey"
                 >
                   <option>Survey Cetogary</option>
                   <option>Communation or valunteer feedback</option>
@@ -117,7 +122,7 @@ function Dashbord() {
                   <option>General employee feedback</option>
                   <option>Event registration</option>
                   <option>Event feedback</option>
-                  <option>Academic  research</option>
+                  <option>Academic research</option>
                   <option>Course or parent feedback</option>
                   <option>Quiz</option>
                   <option>Other</option>
@@ -128,7 +133,9 @@ function Dashbord() {
             </ModalBody>
 
             <ModalFooter>
-              <Button colorScheme="green" onClick={submit}>Submit</Button>
+              <Button colorScheme="green" onClick={submit}>
+                Submit
+              </Button>
             </ModalFooter>
           </ModalContent>
         </Modal>

@@ -18,6 +18,7 @@ import {
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
   import {useDispatch, useSelector} from "react-redux";
 import { signup } from '../../Redux/Signup/Signup.action';
+import Navbar from '../../compounts/navbar/Navbar';
 
 
 // export const existUser= JSON.parse(localStorage.getItem("userDetails"))||[];
@@ -45,6 +46,9 @@ import { signup } from '../../Redux/Signup/Signup.action';
     
     
     return (
+      <>
+      <Navbar/>
+      
       <Flex
         minH={'100vh'}
         align={'center'}
@@ -117,5 +121,7 @@ import { signup } from '../../Redux/Signup/Signup.action';
           </Box>
         </Stack>
       </Flex>
+      </>
+
     );
   }

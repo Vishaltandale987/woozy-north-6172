@@ -2,9 +2,12 @@ import React from 'react'
 import {Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Checkbox, FormControl, FormLabel, Heading, Icon, Image, Input, List, ListIcon, ListItem, SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs, Text, UnorderedList} from "@chakra-ui/react";
 import { MdCheckCircle } from 'react-icons/md';
 import {AiFillCloseCircle,AiOutlineArrowRight} from "react-icons/ai"
+import Navbar from '../../compounts/navbar/Navbar';
 const Plan = () => {
   return (
     <Box>
+      <Navbar/>
+
         <Box>
             <Heading display={{base:"inherit",sm:"inherit",md:"inherit",lg:"none","2xl":"none"}} fontSize={"42px"} fontWeight="500" lineHeight={"48px"} marginBottom="10px" color="#4a4a3b">Compare all Plans</Heading>
             <Heading display={{base:"none",sm:"none",md:"none",lg:"inherit","2xl":"inherit"}} fontSize={"42px"} fontWeight="500" lineHeight={"48px"} marginBottom="10px" color="#4a4a3b">Choose a plan that works for you</Heading>

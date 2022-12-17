@@ -6,10 +6,14 @@ import PriceWrapper from './expmle'
 import PriceWrapper2 from "./expmle2"
 import PriceWrapper3 from './exple3'
 import PriceWrapper4 from "./last"
+import Navbar from '../../compounts/navbar/Navbar'
 const Home = () => {
   return (
     <home>
+      <Navbar/>
+
         <div className='AvnishDiv-1'>
+
           <div>
             <div className='AvnishDiv-2'>
             <h1 className='heading_1'>

@@ -1,6 +1,8 @@
-import { Box ,Flex,Heading,Spacer,Button,ButtonGroup} from '@chakra-ui/react'
+import { Box ,Flex,Heading,Spacer,Button,ButtonGroup, Image} from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Company_logo from "../PvtNavbar/assets/company-logo.png"
+
 
 import Solutions from './Solutions';
 
@@ -12,10 +14,15 @@ const Navbar = ({text}) => {
   return (
     <>
    
-    <Flex minWidth='max-content' alignItems='center' gap='40'>
+    <Flex minWidth='max-content' alignItems='center' gap='1'>
         
    <Box>
-    <img src={"https://prod.smassets.net/assets/website/2.196.2/images/logo-surveymonkey.svg"}></img>
+    <Link to="/">
+
+    <Image h={'60px'} w={'100px'} src={Company_logo} alt={'logo'}/>
+
+
+    </Link>
    </Box>
    <Solutions/>
    
