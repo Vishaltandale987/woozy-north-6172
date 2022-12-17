@@ -62,7 +62,7 @@
   .AvnishDiv-3{
     width: 80%;
     height: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: auto;
     background-color: #EEEEEE;
     margin-top: 50px;
@@ -82,13 +82,55 @@
 -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
+/* -----------------------------------------who is you survey audience------------------- */
+.grid-who-is-you-servey-audi{
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+}
+.grid-who-is-you-servey-audi-1{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
 
-
+.grid-who-is-you-servey-audi-img{
+  position: relative;
+  text-align: center;
+  color: white;
+  /* border: 1px solid red; */
+}
+.grid-who-is-you-servey-audi-text{
+  position: absolute;
+  bottom:0%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 500;
+  /* border: 1px solid red; */
+  color: #000;
+  text-align: left;
+  width: 85%;
+}
+.grid-who-is-you-servey-audi-text-white{
+  position: absolute;
+  bottom:0%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 500;
+  /* border: 1px solid red; */
+  color:white;
+  text-align: left;
+  width: 85%;
+}
 /* ---------------------------------------------------------- */
  .mainLogoImgDiv{
   margin-top: 100px;
   width: 90%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin-left: 60px;
  }
 .logImage{
@@ -101,6 +143,7 @@
 .logImage img{
   width: 20%;
   height: 40px;
+  margin: auto;
 }
 
 
@@ -167,12 +210,53 @@ font-weight: 500;
   /* border: 1px solid red; */
 }
 
+/* {----------------------Start with an expert-written template------------------------------------------------------------------} */
+
+  .grid-temp-a{
+    width: 100%;
+    height: 600px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
 
 
+  }
+  .grid-temp-a div{
+    /* border: 1px solid black; */
+  }
+  .grid-temp-search{
+    overflow-y: scroll;
+    padding: 10px;
+  }
+  .grid-temp-b{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    overflow-y: scroll;
+    margin: 0px 20px;
+
+  }
 
 
+  .grid-temp-img{
+    position: relative;
+    text-align: center;
+    color: white;
+    /* border: 1px solid red; */
+  }
+  .grid-temp-text{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 500;
+    /* border: 1px solid red; */
+    width: 100%;
+  }
 
-
+ 
+      /* ---------------------------media query---------------------------------- */
        @media screen and (min-device-width: 200px) and (max-device-width: 768px) {
         .AvnishDiv-1{ 
             display: flex;
@@ -189,6 +273,15 @@ font-weight: 500;
           .btn-2{
             width: 100%;
             height: 50px;
+          }
+          .btn-3{
+          
+            flex-flow: column;
+           
+          }
+          .btn-3 Button{
+            width: 90%;
+            margin: 10px;
           }
           .imgDiv img{
             margin-top: 200px;
@@ -226,6 +319,39 @@ font-weight: 500;
               
               width: 100%;
              
+            }
+
+            .grid-temp-a{
+              width: 100%;
+              height: 1500px;
+              margin: auto;
+              /* border: 1px solid red; */
+              flex-flow: column nowrap;
+              /* justify-content: space-evenly;*/
+          
+          
+            
+          } 
+            
+           
+            .grid-temp-b{
+              display: grid;
+              grid-template-columns: repeat(1,1fr);
+              gap: 10px;
+              overflow-y: scroll;
+              margin: 0px 20px;
+          
+            }
+
+            .grid-who-is-you-servey-audi{
+              
+             flex-flow: column nowrap;
+             
+            }
+            .grid-who-is-you-servey-audi-1{
+              display: grid;
+              grid-template-columns: repeat(1,1fr);
+              gap: 10px;
             }
        }
 

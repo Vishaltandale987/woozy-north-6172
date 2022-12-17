@@ -17,7 +17,7 @@ root.render(
     <ChakraProvider>
       <App />
     </ChakraProvider>
-  </ReactProvider>
+  // </ReactProvider>
 
 
 );

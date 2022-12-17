@@ -18,10 +18,8 @@ function PriceWrapper4({ children }) {
   return (
     <Box
       mb={4}
-      shadow="base"
-      borderWidth="1px"
+    
       alignSelf={{ base: 'center', lg: 'flex-start' }}
-      borderColor={useColorModeValue('gray.200', 'gray.500')}
       borderRadius={'xl'}>
       {children}
     </Box>
@@ -31,7 +29,7 @@ function PriceWrapper4({ children }) {
 export default function ThreeTierPricing() {
   return (
     <Box py={12}>
-      <VStack spacing={2} textAlign="center">
+     <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">
         Still curious?
         </Heading>
@@ -47,41 +45,34 @@ export default function ThreeTierPricing() {
         py={10}>
         <PriceWrapper4>
           <Box py={0} px={0}>
-            <Box  w='100%' borderRadius={'5px'} height="100px" color="#FFFFFF" bgColor='#00bf6f'fontWeight="300" fontSize="2xl">
-              Basic
-            </Box>
-           
+          
 
             <HStack justifyContent="center">
               
             </HStack>
           </Box>
           <VStack
-         
+          px={4}
             py={4}
             borderBottomRadius={'xl'}>
-                 <Box textAlign={'center'} w='30%' h='60px' border='3px solid green' borderRadius={'10px'}  fontWeight="300" fontSize="2xl">
-                 <img src="https://www.investopedia.com/thmb/rvzfHEl2Ai0USEUk6_KGhAo6b68=/735x0/goldie_sabaeus_rgb-5bfc2e0a46e0fb0083c0ebb9.png" margin-left="20px" width='50px' alt="" />
+                 <Box textAlign={'center'} w='100%'   borderRadius={'10px'}  fontWeight="300" fontSize="2xl">
+                 <img src="https://prod.smassets.net/assets/cms/sm/uploads//golden-state-warriors.png"  width='90%'alt="" />
                 </Box>
-            <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="green">
-               Sign up
-              </Button>
-            </Box>
-            <List  spacing={2} textAlign="start" py={20} px={14}>
+           
+               <List  spacing={2} textAlign="start" py={20} px={10}>
               <ListItem>
               
-                Send unlimited surveys
+               <Heading as='h4' size='md'>Success Stories</Heading>
               </ListItem>
               <ListItem>
              
-                with up to 10 questions.
+             
               </ListItem>
               <ListItem>
-           
-                Response limits apply.
+             <Text  fontSize='xl' >Read about our customers, explore our webinars, and get guides on collecting feedback in your industry.</Text>
               </ListItem>
-             
+
+              <Text fontSize='2xl' color='blue' cursor={'pointer'} _hover={{borderBottom:'1px solid blue.400'}}>Explore resources</Text>
             </List>
            
            
@@ -98,52 +89,33 @@ export default function ThreeTierPricing() {
              
             </Box>
             <Box py={0} px={0}>
-            <Box  w='100%' borderRadius={'5px'} height="100px" color="#FFFFFF" bgColor='#05467e'fontWeight="300" fontSize="2xl">
-            Individual Advantage
-            </Box>
-              <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
-                ₹
-                </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                1,999
-                </Text>
-              
-              </HStack>
-              <Text fontSize="3xl" >
-                /month
-              </Text>
-            <Text>Billed ₹23,988 annually</Text>
+          
             </Box>
             <VStack
-
+                  px={4}
               py={4}
               borderBottomRadius={'xl'}>
-                 <Box w="80%" pt={7}>
+                 {/* <Box w="80%" pt={7}>
                 <Button w="full" colorScheme="blue">
                 See all features
                 </Button>
-              </Box>
-              <List spacing={2} textAlign="start" py={12} px={14}>
-                <ListItem>
-                  {/* <ListIcon as={FaCheckCircle} color="green.500" /> */}
-                  Get our most popular
-                </ListItem>
-                <ListItem>
-               
-                  features for creating,
-                </ListItem>
-                <ListItem>
-               
-                  sending & analyzing
-                </ListItem>
-                <ListItem>
+              </Box> */}
+               <Box textAlign={'center'} w='100%'   borderRadius={'10px'}  fontWeight="300" fontSize="2xl">
+                 <img src="https://prod.smassets.net/assets/cms/sm/uploads//blog-tile-card.png"  w='70%'alt="" />
+                </Box>
+              <List spacing={4} textAlign="start" py={12} px={10}>
+              <ListItem>
               
-                </ListItem>
-                <ListItem>
-                
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
+              <Heading as='h4' size='md'>Blog</Heading>
+             </ListItem>
+             <ListItem>
+            
+            
+             </ListItem>
+             <ListItem>
+            <Text  fontSize='xl' >Get tips on how to create better surveys, hear the latest product news, or check out our signature research.</Text>
+             </ListItem>
+             <Text fontSize='2xl' color='blue' cursor={'pointer'} _hover={{borderBottom:'1px solid blue.400'}}>See Curiosity at Work</Text>
               </List>
              
             </VStack>
@@ -151,53 +123,32 @@ export default function ThreeTierPricing() {
         </PriceWrapper4>
         <PriceWrapper4>
         <Box py={0} px={0}>
-            <Box  w='100%' borderRadius={'5px'} height="100px" color="#FFFFFF" bgColor='#53225b'fontWeight="300" fontSize="2xl">
-             Team Advantage
-            </Box>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-              ₹
-              </Text>
-              <Text fontSize="5xl" fontWeight="900">
-              ₹1,550
-
-
-              </Text>
-             
-            
-            </HStack>
-            <Text fontSize="3xl" >
-            per user / month
-              </Text>
-            <Text>Starting at 3 users, billed annually</Text>
+           
           </Box>
           <VStack
-          
+             px={4}
             py={4}
             borderBottomRadius={'xl'}>
-                <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="rgb(83,34,91)" bgColor={"rgb(83,34,91)"} color={'#EEEEEE'}>
-                See all features
-              </Button>
-            </Box>
-            <List spacing={2} textAlign="start" py={16} px={12}>
+              
+ <Box textAlign={'center'} w='100%'   borderRadius={'10px'}  fontWeight="300" fontSize="2xl">
+ <img src="https://prod.smassets.net/assets/cms/sm/uploads//help-center-tile.png"  w='90%'alt="" />
+                </Box>
+
+            <List spacing={4} textAlign="start" py={16} px={12}>
               <ListItem>
              
-                Collaboration tools and
+                <Heading as='h4' size='md'>Help Center</Heading>
+                
               </ListItem>
               <ListItem>
-             
-                survey features that help
-              </ListItem>
-              <ListItem>
-             
-                your team work more efficiently.
-              </ListItem>
+            <Text  fontSize='xl' >Access tutorials on how features work, learn more about billing, contact Customer Support, and more.</Text>
+             </ListItem>
+             <Text fontSize='2xl' color='blue' cursor={'pointer'} _hover={{borderBottom:'1px solid blue.400'}}>Visit Help Center</Text>
             </List>
             
           </VStack>
         </PriceWrapper4>
       </Stack>
-    </Box>
+  </Box>
   );
 }

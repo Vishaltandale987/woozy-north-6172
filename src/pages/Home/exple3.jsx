@@ -38,74 +38,59 @@ export default function ThreeTierPricing() {
         spacing={{ base: 4, lg: 10 }}
         py={10}>
         <PriceWrapper3>
-          <Box py={0} px={0}>
-          
-
-            <HStack justifyContent="center">
-              
-            </HStack>
-          </Box>
+         
           <VStack
          
-            py={4}
+            
             borderBottomRadius={'xl'}>
-                 <Box textAlign={'center'} w='100%'   borderRadius={'10px'}  fontWeight="300" fontSize="2xl">
+                 <Box >
                  <img src="https://prod.smassets.net/assets/cms/sm/uploads//Momentive-Symbol-RGB-1-1.png"  alt="" />
                 </Box>
            
-            <List  spacing={2} textAlign="start" py={20} px={14}>
+            <List  spacing={2} textAlign="start" py={10} px={40}>
               <ListItem>
               
               <Heading as='h1' size='xl'>Momentive Solutions</Heading>
               </ListItem>
               <ListItem>
-             
+              <Text fontSize={'2xl'}> 
               Get a platform that can grow and change along with
-              </ListItem>
-              <ListItem>
               your survey needs over time. Browse our plans to
-              </ListItem>
-              <ListItem>
               learn more about specific features.
-              </ListItem>
-             
+              </Text>
+              </ListItem>       
             </List>
-           
+            <Button colorScheme='white' variant='outline'  size='lg'>Visit Momentive</Button>
            
           </VStack>
         </PriceWrapper3>
 
        
         <PriceWrapper3>
-        <Box py={0} px={0}>
-           
-          </Box>
+        
           <VStack
           
-            py={4}
+           
             borderBottomRadius={'xl'}>
               
-                  <Box textAlign={'center'} w='100%'   borderRadius={'10px'}  fontWeight="300" fontSize="2xl">
+                  <Box px={10}>
                  <img src="https://prod.smassets.net/assets/cms/sm/uploads//gfp-logo-rgb-2x-1.png"  alt="" />
                 </Box>
 
-            <List spacing={2} textAlign="start" py={16} px={12}>
+            <List spacing={2} textAlign="start" py={20} px={40}>
               <ListItem>
-             
                 <Heading as='h1' size='xl'>GetFeedback</Heading>
-                
               </ListItem>
+
               <ListItem>
-             
-              Manage your company’s data with advanced security
-              </ListItem>
-              <ListItem>
-             
+              <Text fontSize={'2xl'}> 
+               Manage your company’s data with advanced security
               and control, so you can enable your teams to share
-              </ListItem>
-              <Text size={'2xl'}>
               and collaborate safely.
               </Text>
+              </ListItem>
+              
+              <Button colorScheme='white' variant='outline'  size='lg'>Visit GetFeedback</Button>
             </List>
             
           </VStack>
