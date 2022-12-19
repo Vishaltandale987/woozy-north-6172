@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Footer from "../../footer/Footer";
 import NewSurvey from "../../pages/CreateSurvey/NewSurvey";
 import Dashbord from "../../pages/dashbord/Dashbord";
 import Home from "../../pages/Home/Home";
@@ -27,6 +28,7 @@ const Allrouting = () => {
         <Route path="/surveys" element={<NewSurvey/>}></Route>
         {/* <Route path="/final" element={}></Route> */}
       </Routes>
+      <Footer/>
     </>
   );
 };

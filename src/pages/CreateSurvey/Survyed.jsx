@@ -1,7 +1,11 @@
 import { Box, Heading, Input, Radio, RadioGroup } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Survyed = ({option,title}) => {
+
+
+
+
 
   return (
     <Box w="70%" m="auto" p="20px"mb="30px" boxShadow={"xl"} textAlign="left">
@@ -18,6 +22,10 @@ const Survyed = ({option,title}) => {
 
 
         </Box>
+
+        {/* {
+          map()
+        } */}
 
         <Box display={option==="mcq"?"inherit":"none"}>
                 <Input placeholder='Enter Options'/>

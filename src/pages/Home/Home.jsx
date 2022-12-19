@@ -1,6 +1,14 @@
 import React from 'react'
-import {Button, Stack,Grid,GridItem,Heading, Image} from "@chakra-ui/react"
-
+import{
+  Button, 
+  InputRightAddon,
+  Heading, Image,
+   Input,InputGroup,
+  Box,Checkbox,
+  CheckboxGroup,Stack,
+  Text
+  } from "@chakra-ui/react"
+// import   {FaCheckSquare } from 'react-icons/fa';
 import "./Home.css"
 import PriceWrapper from './expmle'
 import PriceWrapper2 from "./expmle2"
@@ -11,9 +19,7 @@ const Home = () => {
   return (
     <home>
       <Navbar/>
-
         <div className='AvnishDiv-1'>
-
           <div>
             <div className='AvnishDiv-2'>
             <h1 className='heading_1'>
@@ -44,30 +50,48 @@ const Home = () => {
                 <Button border={"none"} borderRadius="5px" fontWaight="bold" bgColor={"white"}  color='#000' size='sm'w='20%' h="45px" fontSize="18px">other</Button>
 
             </div>
-        <Grid
-            h='500px'
-            templateRows='repeat(2, 1fr)'
-            templateColumns='repeat(5, 1fr)'
-            gap={1}
-             marginTop="40px"
-           
-            >
-           <GridItem rowSpan={4} colSpan={1} h='200px' >
-           <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
-            </GridItem>
-           <GridItem colSpan={2} >
-            <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
-            </GridItem>
-            <GridItem colSpan={2}>
-            <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
-            </GridItem>
-            <GridItem colSpan={2}>
-            <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
-            </GridItem>
-            <GridItem colSpan={2}>
-              <Image src="https://prod.smassets.net/assets/website/2.197.0/images/FoW.png" alt=""/>
-            </GridItem>
-            </Grid>
+            <div className='grid-who-is-you-servey-audi'>
+              <div className='grid-who-is-you-servey-audi-img'>
+                <img src='https://prod.smassets.net/assets/website/2.197.0/images/Templates_L.png' alt=''/>
+                 <div className='grid-who-is-you-servey-audi-text'>
+                  <Text >TEMPLATE LIBRARY</Text>
+                  <Heading as='h4'size={"md"}>Explore written survey questions and template</Heading>
+                 </div>
+              </div>
+              <div className='grid-who-is-you-servey-audi-1'>
+                <div className='grid-who-is-you-servey-audi-img'>
+                <img src='https://prod.smassets.net/assets/website/2.197.0/images/HowItWorks_S.png' alt=''/>
+                 <div className='grid-who-is-you-servey-audi-text-white'>
+                  <Text >HOW IT WORKS</Text>
+                  <Heading as='h4'size={"md"}>See how esey to it create send and analyze survey</Heading>
+                 </div>
+                </div>
+
+                 <div className='grid-who-is-you-servey-audi-img'>
+                <img src='https://prod.smassets.net/assets/website/2.197.0/images/Features_S.png' alt=''/>
+                 <div className='grid-who-is-you-servey-audi-text'>
+                  <Text >COMPARE FEATURES</Text>
+                  <Heading as='h4'size={"md"}>Get price details and our full of set of survey features across plans.</Heading>
+                 </div>
+                </div>
+
+                <div className='grid-who-is-you-servey-audi-img'>
+                <img src='https://prod.smassets.net/assets/website/2.197.0/images/RacialEquity_S.png' alt=''/>
+                 <div className='grid-who-is-you-servey-audi-text'>
+                  <Text >RACIAL EQUITY</Text>
+                  <Heading as='h4'size={"md"}>Get resources for addressin advercity , equity ,and inclusion</Heading>
+                 </div>
+                </div>
+
+               <div className='grid-who-is-you-servey-audi-img'>
+                <img src='https://prod.smassets.net/assets/website/2.197.0/images/FoW.png' alt=''/>
+                 <div className='grid-who-is-you-servey-audi-text-white'>
+                  <Text >FUTURE OF WORK</Text>
+                  <Heading as='h4'size={"md"}>Reimaigin your business by gathering feedback</Heading>
+                 </div>
+                </div>
+              </div>
+            </div>
         </div>
        
          {/* _______________________________________________________________________________________ */}
@@ -101,7 +125,7 @@ Get the responses you need in minutes with SurveyMonkey Audience, our trusted pa
           </div>
 
        </div>
-
+  {/* ----------------------Start with an expert-written template------------------------------------------------------------------ */}
 
         <div className='temp'>
         <div className='HeadingTeamplet'>
@@ -115,6 +139,100 @@ Get the responses you need in minutes with SurveyMonkey Audience, our trusted pa
            results you can rely on.
           </p>
         </div>
+        </div>
+
+        <div className=' grid-temp-a'>
+          <div className='grid-temp-search'>
+          <InputGroup size='lg'>
+            <Input placeholder='search' />
+              <InputRightAddon children='search' />
+             </InputGroup>
+             <Heading as={'h4'} size='md'>Filter by survey type</Heading>
+            {/* -----------list--------------- */}
+           <Box py={10} spacing={4}>
+           <CheckboxGroup colorScheme='green' defaultValue={['naruto', 'kakashi']}>
+            <Stack spacing={8} direction={['row', 'column']}>
+            <Checkbox size='lg' colorScheme='green' >Customers</Checkbox>
+            <Checkbox size='lg' colorScheme='green' >Education</Checkbox>
+            <Checkbox size='lg' colorScheme='green' >Employees</Checkbox>
+           <Checkbox size='lg' colorScheme='green' >Healthcare</Checkbox>
+           <Checkbox size='lg' colorScheme='green' >Market Research</Checkbox>
+           <Checkbox size='lg' colorScheme='green' >Nonprofit</Checkbox>
+           <Checkbox size='lg' colorScheme='green' >Other</Checkbox>
+           <Checkbox size='lg' colorScheme='green' >Events</Checkbox>
+           <Checkbox size='lg' colorScheme='green' >Events</Checkbox>
+
+           </Stack>
+           </CheckboxGroup>
+           </Box>
+            {/* ----------------------------- */}
+          </div>
+          <div className='grid-temp-b'>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//customer-satisfaction-survey-template-1.png" alt="" />
+              <div className='grid-temp-text'>Custumer  sutisfaction survey</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//Product-Survey.png" alt="" />
+              <div className='grid-temp-text'>Market research- product survey</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//360-Degree-Employee-Evaluation.png" alt="" />
+              <div className='grid-temp-text'>360-degree employee evaluation</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//Brand-Awareness.png" alt="" />
+              <div className='grid-temp-text'>Brand awareness survey template</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//product-testing-survey-template.png" alt="" />
+              <div className='grid-temp-text'>Product testing</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//employee-engagement-survey-template.png" alt="" />
+              <div className='grid-temp-text'>Employee engagement</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//customer-service-survey-template.png" alt="" />
+              <div className='grid-temp-text'>Customer service</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//customer-satisfaction-survey-template-1.png" alt="" />
+              <div className='grid-temp-text'>Website feedback servey template</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//Website_surveys.png" alt="" />
+              <div className='grid-temp-text'>Management performance</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//management-performance-survey-template.png" alt="" />
+              <div className='grid-temp-text'>General event feedback survey template</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//employee-satisfaction-survey-template.png" alt="" />
+              <div className='grid-temp-text'>Employee satisfaction </div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//university-student-satisfaction-survey-template.png" alt="" />
+              <div className='grid-temp-text'>University student satisfaction</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//environmental-issues-survey-template.png" alt="" />
+              <div className='grid-temp-text'>Environmental issues</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//net-promoter-score-survey-template.png" alt="" />
+              <div className='grid-temp-text'>Net Promoter Score (NPS)</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//software-evaluation-survey-template.png" alt="" />
+              <div className='grid-temp-text'>Software evaluation servey template</div>
+            </div>
+            <div className='grid-temp-img'>
+              <img src="https://prod.smassets.net/assets/cms/sm/uploads//education-demographics-survey-template.png" alt="" />
+              <div className='grid-temp-text'>Education demographics</div>
+            </div>
+          </div>
         </div>
       {/* ------------------------------------------------------------------------------------------/ */}
 
@@ -141,6 +259,10 @@ Get the responses you need in minutes with SurveyMonkey Audience, our trusted pa
         </div>
 
         <PriceWrapper4/>
+
+
+
+      
     </home>
   )
 }

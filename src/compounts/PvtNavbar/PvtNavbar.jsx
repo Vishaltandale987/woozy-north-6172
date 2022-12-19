@@ -42,7 +42,12 @@ export default function PvtNavbar() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box>
+
+    <Link to="/">
+
                 <Image h={'60px'} w={'100px'} src={Company_logo} alt={'logo'}/>
+    </Link>
+
             </Box>
             <HStack
               as={'nav'}
@@ -67,7 +72,7 @@ export default function PvtNavbar() {
 
               <Link to="/dashbord">Dashbord</Link>
               <Link to="/surveys">Surveys</Link>
-              <Link to="/">Final</Link>
+              {/* <Link to="/">Final</Link> */}
 
 
               

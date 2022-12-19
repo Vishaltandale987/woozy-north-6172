@@ -1,9 +1,10 @@
-.box{
+.boxss{
 display: grid;
 grid-template-columns: repeat(2 ,1fr);
 /* border: 1px solid black; */
-margin-left: 17em;
+margin-left: 25em;
 width: 30em;
+margin-top: 3em;
 
 
 }
